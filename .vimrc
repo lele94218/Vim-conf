@@ -9,10 +9,9 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
-
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -41,3 +40,6 @@ set shiftwidth=4
 set noexpandtab
 highlight ColorColumn ctermbg=darkgray
 set guifont=Monaco:h15
+
+
+map <C-a> <esc>ggVG<CR>
