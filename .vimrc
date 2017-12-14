@@ -41,5 +41,13 @@ set noexpandtab
 highlight ColorColumn ctermbg=darkgray
 set guifont=Monaco:h15
 
+" Keybinding
 
-map <C-a> <esc>ggVG<CR>
+map			<C-a> <esc>ggVG<CR>
+vmap		<C-c> "+y
+vmap		<C-v> "+p
+vmap		<C-x> "+x
+noremap		<C-s> <esc>:update<CR>
+inoremap	<C-s> <esc>:update<CR>a
+noremap		<C-w> <esc>:wq<CR>
+inoremap	<C-w> <esc>:wq<CR>
