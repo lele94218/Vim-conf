@@ -1,3 +1,4 @@
+set t_BE=0
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -45,9 +46,11 @@ set guifont=Monaco:h15
 
 map			<C-a> <esc>ggVG<CR>
 vmap		<C-c> "+y
-vmap		<C-v> "+p
+map			<C-v> "+gP
 vmap		<C-x> "+x
 noremap		<C-s> <esc>:update<CR>
 inoremap	<C-s> <esc>:update<CR>a
 noremap		<C-w> <esc>:wq<CR>
 inoremap	<C-w> <esc>:wq<CR>
+map			<C-l> mzgg=G`z
+
