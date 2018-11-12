@@ -1,56 +1,27 @@
-set t_BE=0
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nu
+let mapleader=";"
+filetype on
+filetype plugin on
+setlocal spell spelllang=en_us
+set incsearch
+set ignorecase
+set nocompatible
+set wildmenu
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-
-autocmd Filetype tex setl updatetime=1
-set nu!
-filetype plugin indent on
-set nofoldenable
-syntax on
-set exrc
-set secure
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set noexpandtab
-highlight ColorColumn ctermbg=darkgray
-set guifont=Monaco:h15
-
-" Keybinding
-
-map			<C-a> <esc>ggVG<CR>
-vmap		<C-c> "+y
-map			<C-v> "+gP
-vmap		<C-x> "+x
-noremap		<C-s> <esc>:update<CR>
-inoremap	<C-s> <esc>:update<CR>a
-noremap		<C-w> <esc>:wq<CR>
-inoremap	<C-w> <esc>:wq<CR>
-map			<C-l> mzgg=G`z
-
+" Mapping keys
+nmap LA 0
+nmap LE $
+vnoremap <Leader>y "+y
+nmap <Leader>p "+p
+nmap <Leader>q :q<CR>
+nmap <Leader>w :w<CR>
+nmap <Leader>WQ :wa<CR>:q<CR>
+nmap <Leader>Q :qa!<CR>
+nnoremap nw <C-W><C-W>
+" Jumping to window
+nnoremap <Leader>lw <C-W>l
+nnoremap <Leader>hw <C-W>h
+nnoremap <Leader>kw <C-W>k
+nnoremap <Leader>jw <C-W>j
+" .vimrc
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
